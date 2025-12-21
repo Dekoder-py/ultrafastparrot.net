@@ -13,10 +13,13 @@
     document.body.style.backgroundImage = "url(./hyperfastparrot.gif)";
   }
 
-  // Check if URL ends with ?hyper
-  if (window.location.search === "?hyper") {
-    setHyperBackground();
-  }
+  // Wait for DOM to be ready
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if URL ends with ?hyper
+    if (window.location.search === "?hyper") {
+      setHyperBackground();
+    }
+  });
 
   document.addEventListener("keydown", (e) => {
     // Add the typed character to the sequence
