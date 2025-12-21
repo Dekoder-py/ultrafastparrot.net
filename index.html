@@ -4,3 +4,23 @@
     background-color: black;
   }
 </style>
+<script>
+  let typedSequence = "";
+  const targetSequence = "hyper";
+
+  document.addEventListener("keydown", (e) => {
+    // Add the typed character to the sequence
+    typedSequence += e.key.toLowerCase();
+
+    // Keep only the last N characters (where N is the length of target sequence)
+    if (typedSequence.length > targetSequence.length) {
+      typedSequence = typedSequence.slice(-targetSequence.length);
+    }
+
+    // Check if the sequence matches "hyper"
+    if (typedSequence === targetSequence) {
+      document.body.style.backgroundImage = "url(./hyperfastparrot.gif)";
+      typedSequence = ""; // Reset sequence
+    }
+  });
+</script>
