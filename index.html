@@ -8,6 +8,16 @@
   let typedSequence = "";
   const targetSequence = "hyper";
 
+  // Check URL query parameter on page load
+  function setHyperBackground() {
+    document.body.style.backgroundImage = "url(./hyperfastparrot.gif)";
+  }
+
+  // Check if URL ends with ?hyper
+  if (window.location.search === "?hyper") {
+    setHyperBackground();
+  }
+
   document.addEventListener("keydown", (e) => {
     // Add the typed character to the sequence
     typedSequence += e.key.toLowerCase();
@@ -19,7 +29,7 @@
 
     // Check if the sequence matches "hyper"
     if (typedSequence === targetSequence) {
-      document.body.style.backgroundImage = "url(./hyperfastparrot.gif)";
+      setHyperBackground();
       typedSequence = ""; // Reset sequence
     }
   });
