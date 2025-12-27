@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { SITES } from "../../sites.ts";
 ---
 
 <html lang="en">
@@ -12,16 +13,32 @@ import "../styles/global.css";
     </head>
     <body>
         <div class="w-full max-w-4xl p-4 mx-auto flex flex-col gap-4">
-            <div
-                class="w-full h-20 bg-size-[40px] animate-[scroll_0.3s_linear_infinite]"
-                style="background-image: url('/ultrafastparrot.gif');"
-            >
+            <div class="bg-card rounded-lg overflow-hidden flex flex-col gap-4">
+                <div
+                    class="w-full h-20 bg-size-[40px] animate-[scroll_0.3s_linear_infinite]"
+                    style="background-image: url('/ultrafastparrot.gif');"
+                >
+                </div>
+                <h1 class="pl-4 text-6xl">ultrafastparrot cult</h1>
+                <h2 class="pl-4 text-3xl">webring</h2>
+                <div
+                    class="w-full h-20 bg-size-[40px] animate-[scroll_0.3s_linear_infinite_reverse]"
+                    style="background-image: url('/ultrafastparrot.gif');"
+                >
+                </div>
             </div>
-            <h1 class="text-center text-6xl">ultrafastparrot cult</h1>
-            <div
-                class="w-full h-20 bg-size-[40px] animate-[scroll_0.3s_linear_infinite]"
-                style="background-image: url('/ultrafastparrot.gif');"
-            >
+            <div class="grid grid-cols-1 sm:grid-cols-3">
+                {
+                    SITES.map((site) => (
+                        <a
+                            class="bg-card border rounded-lg p-4"
+                            href={site.url}
+                        >
+                            <h2 class="text-xl">{site.name}</h2>
+                            <p class="text-gray-500">{site.url}</p>
+                        </a>
+                    ))
+                }
             </div>
         </div>
     </body>
