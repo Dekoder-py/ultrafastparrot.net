@@ -14,3 +14,9 @@ export const GET: APIRoute = async ({ redirect, params }) => {
 
   return redirect(SITES[newSiteIndex].url);
 };
+
+export function getStaticPaths() {
+  return SITES.map((site) => ({
+    params: { slug: site.slug },
+  }));
+}
