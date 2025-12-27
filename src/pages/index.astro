@@ -13,7 +13,9 @@ import SITES from "../../sites.ts";
     </head>
     <body>
         <div class="w-full max-w-4xl p-4 mx-auto flex flex-col gap-2">
-            <div class="bg-card rounded-lg overflow-hidden flex flex-col gap-4">
+            <header
+                class="bg-card rounded-lg overflow-hidden flex flex-col gap-4"
+            >
                 <div
                     class="w-full h-20 bg-size-[40px] animate-[scroll_0.3s_linear_infinite]"
                     style="background-image: url('/ultrafastparrot.gif');"
@@ -26,8 +28,8 @@ import SITES from "../../sites.ts";
                     style="background-image: url('/ultrafastparrot.gif');"
                 >
                 </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            </header>
+            <main class="grid grid-cols-1 sm:grid-cols-3 gap-2">
                 <a
                     href="/random"
                     class="p-4 bg-card rounded-lg border flex flex-row gap-4 items-center"
@@ -73,12 +75,12 @@ import SITES from "../../sites.ts";
                         </a>
                     ))
                 }
-            </div>
-            <div
+            </main>
+            <footer
                 class="w-full h-10 bg-size-[40px] animate-[scroll_0.3s_linear_infinite_reverse]"
                 style="background-image: url('/ultrafastparrot.gif');"
             >
-            </div>
+            </footer>
         </div>
     </body>
 </html>
