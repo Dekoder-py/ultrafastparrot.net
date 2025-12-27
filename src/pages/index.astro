@@ -27,7 +27,14 @@ import SITES from "../../sites.ts";
                 >
                 </div>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+            <div class="flex items-center justify-center"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <a
+                    class="p-4 bg-card rounded-lg border flex flex-row gap-4 items-center justify-center"
+                >
+                    <img src="/ultrafastparrot.gif" class="size-8" />
+                    go to a random site
+                </a>
                 {
                     SITES.map((site) => (
                         <a
