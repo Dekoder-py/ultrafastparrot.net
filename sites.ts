@@ -1,4 +1,4 @@
-export const SITES: {
+const SITES: {
   name: string;
   slug: string;
   url: string;
@@ -11,3 +11,5 @@ export const SITES: {
     email: "me@ingo.au",
   },
 ];
+
+export default SITES.sort((a, b) => a.name.localeCompare(b.name));
