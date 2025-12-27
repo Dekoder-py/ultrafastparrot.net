@@ -7,10 +7,7 @@ export const GET: APIRoute = async ({ redirect, params }) => {
     return redirect("/");
   }
 
-  console.log("Site index:", currentSite);
   const newSiteIndex = currentSite + 1;
-  console.log("New site index:", newSiteIndex);
-  console.log("Sites length:", SITES.length);
 
   if (newSiteIndex >= SITES.length) {
     return redirect(SITES[0].url);
