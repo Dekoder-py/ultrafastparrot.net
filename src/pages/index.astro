@@ -68,11 +68,11 @@ import SITES from "../../sites.ts";
                 {
                     SITES.map((site) => (
                         <a
-                            class="bg-card border rounded-lg p-4"
+                            class="bg-card border rounded-lg p-4 text-foreground"
                             href={site.url}
                         >
                             <h2 class="text-xl">{site.name}</h2>
-                            <p class="text-gray-500">{site.url}</p>
+                            <p class="text-foreground/75">{site.url}</p>
                         </a>
                     ))
                 }
