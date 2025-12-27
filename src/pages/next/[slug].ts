@@ -7,12 +7,16 @@ export const GET: APIRoute = async ({ redirect, params }) => {
     return redirect("/");
   }
 
+  console.log("Site index:", currentSite);
   const newSiteIndex = currentSite + 1;
-  if (newSiteIndex >= SITES.length) {
-    redirect(SITES[0].url);
-  }
+  console.log("New site index:", newSiteIndex);
+  console.log("Sites length:", SITES.length);
 
-  return redirect(SITES[newSiteIndex].url);
+  if (newSiteIndex >= SITES.length) {
+    return redirect(SITES[0].url);
+  } else {
+    return redirect(SITES[newSiteIndex].url);
+  }
 };
 
 export function getStaticPaths() {
