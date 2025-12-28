@@ -109,13 +109,21 @@
     --shadow-2xl: var(--shadow-2xl);
 }
 
+@font-face {
+    font-family: "GeistMono";
+    src: url("/fonts/GeistMono.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     @apply bg-background text-foreground;
 }
 
 * {
     @apply border-border;
-    font-family: monospace;
+    font-family: "GeistMono", monospace;
 }
 
 @keyframes scroll {
