@@ -16,6 +16,12 @@ const SITES: {
     url: "https://codingcorner.dev",
     email: "kyle@codingcorner.dev",
   },
+  {
+    name: "Josh",
+    slug: "josh",
+    url: "https://site.slitrostudio.me",
+    email: "hey@slitrostudio.me",
+  }
 ];
 
 export default SITES.sort((a, b) => a.name.localeCompare(b.name));
